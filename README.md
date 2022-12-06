@@ -4,17 +4,17 @@ To this project, we are using the reviews data from Kaggle on Hilton Hawaiian Vi
 
 We are planning to use the following R packages to achieve different functionalities w.r.t the project.
 
-a.	dplyr for Data manipulation \n
-b.	ggplot2 for Data Visualization \n
-c.	tidyr for Data Cleansing \n
-d.	reshape2 for data transformation \n
-e.	tidytext for analysis and visualization of text \n
-f.	purrr for working with functions and vectors \n
-g.	scales: to override the ggplot2 defaults. \n
-h.	Lubridate: for working with dates and times. \n
-i.	widyr: for co-occurrence and co-relations among words \n
-j.	snowballC for word stemming \n
-k.	wordcloud for analyze and visualize keywords \n
+a.	dplyr for Data manipulation.
+b.	ggplot2 for Data Visualization. 
+c.	tidyr for Data Cleansing.
+d.	reshape2 for data transformation.
+e.	tidytext for analysis and visualization of text. 
+f.	purrr for working with functions and vectors.
+g.	scales: to override the ggplot2 defaults. 
+h.	Lubridate: for working with dates and times.
+i.	widyr: for co-occurrence and co-relations among words.
+j.	snowballC for word stemming.
+k.	wordcloud for analyze and visualize keywords.
 
 We plan on utilizing R’s data manipulation, transformation and cleansing capabilities combined with text analysis techniques like stemming, lemmatization, stop words, bigrams, and trigrams to achieve at a sentiment for a review. In the process we want to make sure that we preserve the emotion of the review by only removing the stop words from the review. Furthermore, we are planning to visualize the importance and association between different words using graphs, charts, plots, and frequency counts.
 
