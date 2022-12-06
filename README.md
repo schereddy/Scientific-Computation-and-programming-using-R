@@ -18,6 +18,6 @@ k.	wordcloud for analyze and visualize keywords. <br />
 
 We plan on utilizing R’s data manipulation, transformation and cleansing capabilities combined with text analysis techniques like stemming, lemmatization, stop words, bigrams, and trigrams to achieve at a sentiment for a review. In the process we want to make sure that we preserve the emotion of the review by only removing the stop words from the review. Furthermore, we are planning to visualize the importance and association between different words using graphs, charts, plots, and frequency counts.
 
-Source: https://www.kaggle.com/datasets/shrinidhisaravanan/hilton-hawaiian-village 
+Source: https://www.kaggle.com/datasets/shrinidhisaravanan/hilton-hawaiian-village <br />
 Data:  https://www.kaggle.com/code/kerneler/starter-hilton-hawaiian-village-048bdbd4-9/data
 
