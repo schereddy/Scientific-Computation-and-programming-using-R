@@ -14018,7 +14018,7 @@ a.anchor-link {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load the gesture recognizer model</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/Users/cherp/OneDrive/Desktop/practice_python/hand-gesture-recognition-code/&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/Users/schereddy/OneDrive/Desktop/practice_python/hand-gesture-recognition-code/&quot;</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;mp_hand_gesture&#39;</span><span class="p">)</span>
 <span class="c1"># Load class names</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gesture.names&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -14056,149 +14056,61 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize the webcam for Hand Gesture Recognition Python project</span>
-<span class="c1"># import time</span>
-<span class="c1"># cap = cv2.VideoCapture(0)</span>
-<span class="c1"># time.sleep(1)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># while True:</span>
-<span class="c1">#       # Read each frame from the webcam</span>
-<span class="c1">#     flag, frame = cap.read()</span>
-<span class="c1">#     x,y,c=frame.shape</span>
-<span class="c1">#       # Flip the frame vertically</span>
-<span class="c1">#     frame = cv2.flip(frame, 1)</span>
-<span class="c1">#       # Show the final output</span>
-<span class="c1">#     cv2.imshow(&quot;Output&quot;, frame)</span>
-<span class="c1">#     if cv2.waitKey(1) == ord(&#39;q&#39;):</span>
-<span class="c1">#         break</span>
-
-<span class="c1"># # # release the webcam and destroy all active windows</span>
-<span class="c1"># cap.release()</span>
-<span class="c1"># cv2.destroyAllWindows()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># framergb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)</span>
-<span class="c1"># # Get hand landmark prediction</span>
-<span class="c1"># result = hands.process(framergb)</span>
-<span class="c1"># className = &#39;&#39;</span>
-<span class="c1">#   # post process the result</span>
-<span class="c1"># if result.multi_hand_landmarks:</span>
-<span class="c1">#     landmarks = []</span>
-<span class="c1">#     for handslms in result.multi_hand_landmarks:</span>
-<span class="c1">#         for lm in handslms.landmark:</span>
-<span class="c1">#             # print(id, lm)</span>
-<span class="c1">#             lmx = int(lm.x * x)</span>
-<span class="c1">#             lmy = int(lm.y * y)</span>
-<span class="c1">#             landmarks.append([lmx, lmy])</span>
-<span class="c1">#         # Drawing landmarks on frames</span>
-<span class="c1">#         mpDraw.draw_landmarks(frame, handslms,mpHands.HAND_CONNECTIONS)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+      <span class="c1"># Read each frame from the webcam</span>
+    <span class="n">flag</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">framergb</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+    <span class="c1"># Get hand landmark prediction</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">hands</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">framergb</span><span class="p">)</span>
+<span class="c1">#     print(result.multi_hand_landmarks)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">multi_hand_landmarks</span><span class="p">:</span>
+        <span class="n">landmarks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">handslms</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">multi_hand_landmarks</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">lm</span> <span class="ow">in</span> <span class="n">handslms</span><span class="o">.</span><span class="n">landmark</span><span class="p">:</span>
+<span class="c1">#                 print(id, lm)</span>
+                <span class="n">h</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">shape</span>
+                <span class="n">cx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span>
+                <span class="n">cy</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">h</span><span class="p">)</span>
+<span class="c1">#                 print(cx,cy)</span>
+<span class="c1">#                 cv2.circle(frame,(cx,cy),10,(255,8,255),cv2.FILLED)</span>
+                <span class="n">landmarks</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">])</span>
+                <span class="c1"># Drawing landmarks on frames</span>
+                <span class="n">mpDraw</span><span class="o">.</span><span class="n">draw_landmarks</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">handslms</span><span class="p">,</span><span class="n">mpHands</span><span class="o">.</span><span class="n">HAND_CONNECTIONS</span><span class="p">)</span>
+                      
+    <span class="n">cTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">fps</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">cTime</span><span class="o">-</span><span class="n">pTime</span><span class="p">)</span>
+    <span class="n">pTime</span><span class="o">=</span><span class="n">cTime</span>    
+      <span class="c1"># Flip the frame vertically</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">putText</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fps</span><span class="p">)),(</span><span class="mi">18</span><span class="p">,</span><span class="mi">78</span><span class="p">),</span><span class="n">cv2</span><span class="o">.</span><span class="n">FONT_HERSHEY_PLAIN</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="mi">255</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span>
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+        
+      <span class="c1"># Show the final output</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;Output&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="k">break</span>
 
+<span class="c1"># # release the webcam and destroy all active windows</span>
+<span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp/ipykernel_29484/3859237950.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">     14</span>         <span class="ansi-red-intense-fg ansi-bold"># Drawing landmarks on frames</span>
-<span class="ansi-green-fg">     15</span>         mpDraw<span class="ansi-yellow-intense-fg ansi-bold">.</span>draw_landmarks<span class="ansi-yellow-intense-fg ansi-bold">(</span>frame<span class="ansi-yellow-intense-fg ansi-bold">,</span> handslms<span class="ansi-yellow-intense-fg ansi-bold">,</span>mpHands<span class="ansi-yellow-intense-fg ansi-bold">.</span>HAND_CONNECTIONS<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 16</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span>landmarks<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;landmarks&#39; is not defined</pre>
+     </div>
 </div>
 </div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import time</span>
-<span class="c1"># cap = cv2.VideoCapture(0)</span>
-<span class="c1"># time.sleep(1)</span>
-
-<span class="c1"># while True:</span>
-<span class="c1">#       # Read each frame from the webcam</span>
-<span class="c1">#     flag, frame = cap.read()</span>
-<span class="c1">#     framergb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)</span>
-<span class="c1">#     # Get hand landmark prediction</span>
-<span class="c1">#     result = hands.process(framergb)</span>
-<span class="c1"># #     print(result.multi_hand_landmarks)</span>
-<span class="c1">#     if result.multi_hand_landmarks:</span>
-<span class="c1">#         landmarks = []</span>
-<span class="c1">#         for handslms in result.multi_hand_landmarks:</span>
-<span class="c1">#             for lm in handslms.landmark:</span>
-<span class="c1"># #                 print(id, lm)</span>
-<span class="c1">#                 h,w,c=frame.shape</span>
-<span class="c1">#                 cx = int(lm.x * w)</span>
-<span class="c1">#                 cy = int(lm.y * h)</span>
-<span class="c1"># #                 print(cx,cy)</span>
-<span class="c1"># #                 cv2.circle(frame,(cx,cy),10,(255,8,255),cv2.FILLED)</span>
-<span class="c1">#                 landmarks.append([cx, cy])</span>
-<span class="c1">#                 # Drawing landmarks on frames</span>
-<span class="c1">#                 mpDraw.draw_landmarks(frame, handslms,mpHands.HAND_CONNECTIONS)</span>
-                      
-<span class="c1">#     cTime=time.time()</span>
-<span class="c1">#     fps=1/(cTime-pTime)</span>
-<span class="c1">#     pTime=cTime    </span>
-<span class="c1">#       # Flip the frame vertically</span>
-<span class="c1">#     frame = cv2.flip(frame, 1)</span>
-<span class="c1">#     cv2.putText(frame,str(int(fps)),(18,78),cv2.FONT_HERSHEY_PLAIN,3,(255,8,255),3)</span>
-    
-        
-<span class="c1">#       # Show the final output</span>
-<span class="c1">#     cv2.imshow(&quot;Output&quot;, frame)</span>
-<span class="c1">#     if cv2.waitKey(1) == ord(&#39;q&#39;):</span>
-<span class="c1">#         break</span>
-
-<span class="c1"># # # release the webcam and destroy all active windows</span>
-<span class="c1"># cap.release()</span>
-<span class="c1"># cv2.destroyAllWindows()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -14319,38 +14231,24 @@ thumbs down
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import cv2</span>
-<span class="c1"># import mediapipe as mp</span>
-<span class="c1"># import time</span>
-<span class="c1"># from cvzone import HandTrackingModule</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">mediapipe</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">cvzone</span> <span class="kn">import</span> <span class="n">HandTrackingModule</span>
 
-<span class="c1"># cap=cv2.VideoCapture(0)</span>
-<span class="c1"># time.sleep(2)</span>
-<span class="c1"># # cv2.imshow(&quot;Image&quot;,img)</span>
+<span class="n">cap</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># cv2.imshow(&quot;Image&quot;,img)</span>
 
-<span class="c1"># while True:</span>
-<span class="c1">#     success,img=cap.read()</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">success</span><span class="p">,</span><span class="n">img</span><span class="o">=</span><span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
     
-<span class="c1">#     cv2.imshow(&quot;Image&quot;,img)</span>
-<span class="c1">#     if cv2.waitKey(1) == ord(&#39;q&#39;):</span>
-<span class="c1">#         break</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;Image&quot;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="k">break</span>
         
-<span class="c1"># cap.release()</span>
-<span class="c1"># cv2.destroyAllWindows()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
 </pre></div>
 
      </div>
